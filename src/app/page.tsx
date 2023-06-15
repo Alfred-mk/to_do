@@ -19,12 +19,20 @@ export default async function Home() {
     <>
       <header className="flex justify-between item-center mb-4">
         <h1 className="text-2x1">Todos</h1>
-        <Link
-          className="border border-slate-300 
-          text-slate-300 px-2 py-1 rounded 
-          hover:bg-slate-700 focus-within:bg-slate-700 
-          outline-none"
-          href="/new">New</Link>
+        <div className="flex gap-1 justify-end">
+          <Link
+            className="border border-slate-300 
+            text-slate-300 px-2 py-1 rounded 
+            hover:bg-slate-700 focus-within:bg-slate-700 
+            outline-none" href="/new">New
+          </Link>
+          <Link
+            className="border border-slate-300 
+            text-slate-300 px-2 py-1 rounded 
+            hover:bg-slate-700 focus-within:bg-slate-700 
+            outline-none" href="/posts">Posts
+          </Link>
+        </div>
       </header>
       <ul className="pl-4">
         {todos.map(todo => (
